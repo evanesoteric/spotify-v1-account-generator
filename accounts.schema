@@ -1,0 +1,15 @@
+CREATE TABLE accounts (
+    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    display_name VARCHAR(255) NOT NULL,
+    birth_date DATE NOT NULL,
+    gender VARCHAR(255) NULL,
+    verified BOOL NULL,
+    password_reset BOOL NULL DEFAULT FALSE,
+    creation_date TIMESTAMP NOT NULL,
+    last_login TIMESTAMP NULL,
+    in_use BOOL NULL DEFAULT FALSE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
